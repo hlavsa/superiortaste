@@ -77,9 +77,9 @@
     </style>
     <script>
       document
-        .getElementById("rewindAudio")
+        .getElementById("rewindAudioButton")
         .addEventListener("click", function () {
-          var audio1 = document.getElementById("audioPlayer1");
+          var audio1 = document.getElementById("rewindAudio");
           if (audio1.paused) {
             audio1.play();
           } else {
@@ -88,9 +88,9 @@
         });
 
       document
-        .getElementById("buttonAudio")
+        .getElementById("buttonAudioButton")
         .addEventListener("click", function () {
-          var audio2 = document.getElementById("audioPlayer2");
+          var audio2 = document.getElementById("buttonAudio");
           if (audio2.paused) {
             audio2.play();
           } else {
