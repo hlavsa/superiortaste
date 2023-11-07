@@ -75,6 +75,29 @@
         background-repeat: repeat;
       }
     </style>
+    <script>
+      document
+        .getElementById("rewindAudio")
+        .addEventListener("click", function () {
+          var audio1 = document.getElementById("audioPlayer1");
+          if (audio1.paused) {
+            audio1.play();
+          } else {
+            audio1.currentTime = 0;
+          }
+        });
+
+      document
+        .getElementById("buttonAudio")
+        .addEventListener("click", function () {
+          var audio2 = document.getElementById("audioPlayer2");
+          if (audio2.paused) {
+            audio2.play();
+          } else {
+            audio2.currentTime = 0;
+          }
+        });
+    </script>
   </head>
   <body class="grid place-items-center min-h-screen">
     <main>
@@ -86,7 +109,10 @@
       <div class="grid grid-cols-3 gap-8 justify-between">
         <div class="grid grid-cols-4 gap-4">
           <div class="w-full" id="backward">
-            <div id="backward_off">
+            <div class="backward_off" id="rewindAudioButton">
+              <audio id="rewindAudio">
+                <source src="rewind.mp3" type="audio/mpeg" />
+              </audio>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="60"
@@ -311,7 +337,10 @@
             </div>
           </div>
           <div class="w-full" id="play">
-            <div id="play_off">
+            <div class="play_off" id="buttonAudioButton">
+              <audio id="buttonAudio">
+                <source src="button.mp3" type="audio/mpeg" />
+              </audio>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="60"
@@ -467,7 +496,10 @@
             </div>
           </div>
           <div class="w-full" id="pause">
-            <div id="pause_off">
+            <div class="pause_off" id="buttonAudioButton">
+              <audio id="buttonAudio">
+                <source src="button.mp3" type="audio/mpeg" />
+              </audio>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="60"
@@ -686,7 +718,10 @@
             </div>
           </div>
           <div class="w-full" id="forward">
-            <div id="forward_off">
+            <div id="forward_off" id="rewindAudioButton">
+              <audio id="rewindAudio">
+                <source src="rewind.mp3" type="audio/mpeg" />
+              </audio>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="60"
